@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img{
+            display: inline;
+            align-items: flex-end;
+            right: 20%;
+            left:20%
+        }
+        .flex-container {
+  display: flex;
+  /* background-color: rgb(241, 241, 241); */
+}
+
+.flex-container > div {
+  /* background-color:  rgb(241, 241, 241); */
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  /* background-image: url('cloud.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover; */
+  /* animation:back;
+  animation-duration: 5s;
+  animation-iteration-count: infinite; */
+}
+
+body {
+  background-image: url('cloud.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  animation:back 2s linear;
+
+  direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes  back{
+  0%{
+    background-position: center center;
+  }
+  100%{
+    background-position: -1300px;
+  }
+}
+    </style>
+</head>
+<body  >
+
+    <div   id="flex" class="flex-container">
+       
+        
+        <div><img id="img1"   width="20%" src="bird.gif" /></div>
+          
+      </div>
+      <script>
+          var nommingCake = document.getElementById('img1').animate(
+  [
+    // { transform: 'rotate(0) translate3D(-50%, 0%, 0)', color: '#000' },
+    // { color: '#431236', offset: 0.3},
+    // { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' },
+    { transform: 'translate(0%, 0%) scale(1)' },
+    { transform: 'translate(50%, 50%) scale(1)' } ,
+    { transform: 'translate(80%, 90%) scale(1)' } , 
+    { transform: 'translate(100%, 120%) scale(1)' } ,
+     
+     
+  ], {
+    duration: 5000,
+    iterations: 5
+  }
+);
+      </script>
+      
+</body>
+</html>
